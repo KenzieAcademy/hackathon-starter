@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import RegisterForm from "./components/registerForm/RegisterForm";
-import registerForm from "./components/registerForm/RegisterForm";
 
 class App extends React.Component {
   render() {
