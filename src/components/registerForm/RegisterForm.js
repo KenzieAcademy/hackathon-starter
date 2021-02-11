@@ -1,6 +1,7 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
+import { Link } from "react-router-dom";
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -30,7 +31,43 @@ class RegisterForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+
+          <br />
+
+          <label htmlFor="first-name">Last Name</label>
+          <input
+            type="text"
+            name="username"
+            autoFocus
+            required
+            onChange={this.handleChange}
+          />
+
+          <br />
+
+          <label htmlFor="first-name">Username</label>
+          <input
+            type="text"
+            name="username"
+            autoFocus
+            required
+            onChange={this.handleChange}
+          />
+
+          <br />
+
+          <label htmlFor="first-name">Password</label>
+          <input
+            type="text"
+            name="username"
+            autoFocus
+            required
+            onChange={this.handleChange}
+          />
         </form>
+        <Link to="/" onClick={this.handleLogout}>
+          Register
+        </Link>
       </div>
     );
   }
