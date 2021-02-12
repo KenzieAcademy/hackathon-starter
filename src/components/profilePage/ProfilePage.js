@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./ProfilePage.css";
@@ -45,6 +44,10 @@ class ProfilePage extends React.Component {
     });
   };
 
+  onClick1 = (event) => {
+    window.open("https://en.wikipedia.org/wiki/Sydney", "_blank");
+  };
+
   handleChange = (event) => {
     let data = { ...this.state };
 
@@ -69,16 +72,30 @@ class ProfilePage extends React.Component {
         </div>
         <div className="Menu">
           <h1>Hello everyone! This is my profile page!</h1>
-          <div>Hey everyone, thanks for visiting my profile!</div>
+          <div>
+            <Container>
+              <Col xs={6} md={4}>
+                <Image
+                  src="https://media.gettyimages.com/photos/businesswoman-smiling-over-white-background-picture-id985138666?s=612x612"
+                  width="200px"
+                />
+              </Col>
+            </Container>
+          </div>
         </div>
-        <Container>
-          <Col xs={6} md={4}>
-            <Image
-              src="https://media.gettyimages.com/photos/businesswoman-smiling-over-white-background-picture-id985138666?s=612x612"
-              roundedCircle
-            />
-          </Col>
-        </Container>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img
+            variant="top"
+            src="https://cdn.xl.thumbs.canstockphoto.com/a-night-scene-of-canada-place-vancouver-bc-canada-stock-image_csp0874996.jpg"
+          />
+          <Card.Body>
+            <Card.Title>My vacation in Sydney!</Card.Title>
+            <Card.Text>Sydney!</Card.Text>
+            <Button variant="primary" onClick={this.onClick1}>
+              Go to Sydney!
+            </Button>
+          </Card.Body>
+        </Card>
       </div>
     );
   }

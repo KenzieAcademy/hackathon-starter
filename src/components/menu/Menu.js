@@ -9,6 +9,12 @@ class Menu extends React.Component {
     this.props.logout();
   };
 
+  deleteMessages = (event) => {
+    this.setState({
+      messages: [],
+    });
+  };
+
   render() {
     return (
       <div className="Menu">

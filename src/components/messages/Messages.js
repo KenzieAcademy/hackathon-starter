@@ -21,6 +21,12 @@ class Messages extends React.Component {
     this.setState(data);
   };
 
+  deleteMessages = (event) => {
+    this.setState({
+      messages: [],
+    });
+  };
+
   sendMessage = (event) => {
     this.setState({
       message: "",
@@ -77,6 +83,7 @@ class Messages extends React.Component {
             value={this.state.message}
           />
           <button onClick={this.newMessageHandler}> Send Message </button>
+          <button onClick={this.deleteMessages}> Delete Messages </button>
         </div>
       </div>
     );

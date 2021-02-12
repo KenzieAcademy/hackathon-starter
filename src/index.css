@@ -6,9 +6,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aquamarine;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #fc0;
+  border: 0;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  box-shadow: 2px 2px 0 black;
 }
