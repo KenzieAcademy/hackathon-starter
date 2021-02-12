@@ -31,6 +31,15 @@ class BlogPage extends React.Component {
   render() {
     return (
       <div>
+        <div id="profile-links">
+          <Link to="/" onClick={this.handleLogout}>
+            Home
+          </Link>
+
+          <Link to="/ContactPage">Contact</Link>
+
+          <Link to="/About">About</Link>
+        </div>
         <h1>Daily updates about my life!</h1>
         <div>
           <li>{this.state.messages}</li>

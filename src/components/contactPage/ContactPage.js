@@ -1,9 +1,6 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
-import Messages from "../messages/Messages";
-import { userIsAuthenticated } from "../../redux/HOCs";
 import { Link } from "react-router-dom";
-import { render } from "react-dom";
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -30,6 +27,15 @@ class ContactPage extends React.Component {
   render() {
     return (
       <div>
+        <div id="profile-links">
+          <Link to="/" onClick={this.handleLogout}>
+            Home
+          </Link>
+
+          <Link to="/About">About</Link>
+
+          <Link to="/BlogPage">Blog</Link>
+        </div>
         <h1>Contact Page</h1>
         <p>For business inquiries, contact me at JaneDoe@gmail.com</p>
         <p>Instagram</p>

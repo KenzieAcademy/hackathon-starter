@@ -2,9 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { withAsyncAction } from "../../redux/HOCs";
 import "./LoginForm.css";
-import RegisterForm from "../registerForm/RegisterForm";
 import { Link } from "react-router-dom";
-import { Route, Switch } from "react-router-dom";
 
 class LoginForm extends React.Component {
   constructor(props) {

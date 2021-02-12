@@ -1,10 +1,13 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
-import Messages from "../messages/Messages";
-import { userIsAuthenticated } from "../../redux/HOCs";
 import { Link } from "react-router-dom";
+import Image from "react-bootstrap/Image";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import "./ProfilePage.css";
-import { render } from "react-dom";
 
 class ProfilePage extends React.Component {
   constructor(props) {
@@ -51,12 +54,6 @@ class ProfilePage extends React.Component {
   };
 
   render() {
-    let display = <div>No Messages Found</div>;
-    if (this.state.messages) {
-      display = this.state.messages.map((value) => {
-        return <li key={value.id}>{value.text}</li>;
-      });
-    }
     return (
       <div>
         <div id="profile-links">
@@ -73,22 +70,15 @@ class ProfilePage extends React.Component {
         <div className="Menu">
           <h1>Hello everyone! This is my profile page!</h1>
           <div>Hey everyone, thanks for visiting my profile!</div>
-
-          {/* <div className="Messages">
-          <div className="ListMessage">{display}</div>
-          <div className="NewMessage">
-            <input
-              name="message"
-              onChange={this.handleChange}
-              value={this.state.message}
-            />
-            <button onClick={this.newMessageHandler}>
-              {" "}
-              Send me a Message!{" "}
-            </button>
-          </div>
-        </div> */}
         </div>
+        <Container>
+          <Col xs={6} md={4}>
+            <Image
+              src="https://media.gettyimages.com/photos/businesswoman-smiling-over-white-background-picture-id985138666?s=612x612"
+              roundedCircle
+            />
+          </Col>
+        </Container>
       </div>
     );
   }
