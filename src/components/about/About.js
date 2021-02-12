@@ -19,7 +19,15 @@ class About extends React.Component {
           <Link to="/BlogPage">Blog</Link>
         </div>
         <h1>About ME!</h1>
-        <div>I like to do stuff!</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          vehicula erat vitae ultricies condimentum. Ut tincidunt nec erat eu
+          porta. Donec a massa at lectus facilisis consectetur. Ut sed tellus
+          orci. Donec imperdiet erat eu ligula accumsan congue. Donec
+          ullamcorper turpis sem. Aliquam finibus leo et auctor facilisis.
+          Mauris in libero vel mauris pellentesque malesuada id vulputate nisi.
+          Proin eget nisi eu tellus pellentesque consectetur.
+        </p>
         <br />
         <Link to="/profilePage">Back to my profile</Link>
       </div>
