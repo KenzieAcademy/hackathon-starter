@@ -1,10 +1,18 @@
 .Menu {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
-  border-radius: 1em;
+  border-radius: 1em; */
+  display: flex;
+  justify-content: center;
+  font-family: "Score Board", sans-serif;
+  text-align: center;
+  background: #2c2c2c;
+  color: #fd8049;
+  text-shadow: 0 0 3px #fd8049;
+  padding: 1rem 0;
 }
 
 #menu-links {
@@ -13,8 +21,12 @@
 }
 
 #menu-links a {
-  padding-right: 0.5em;
+  /* padding-right: 0.5em;
   color: darkblue;
   text-decoration: underline;
-  cursor: pointer;
+  cursor: pointer; */
+  font-family: againtsregular, oswald, sans-serif;
+  font-size: 200%;
+  color: red;
+  text-shadow: 2px 2px 0 black;
 }
