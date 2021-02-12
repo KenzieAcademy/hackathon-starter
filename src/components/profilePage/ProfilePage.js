@@ -3,6 +3,7 @@ import { withAsyncAction } from "../../redux/HOCs";
 import Messages from "../messages/Messages";
 import { userIsAuthenticated } from "../../redux/HOCs";
 import { Link } from "react-router-dom";
+import "./ProfilePage.css";
 import { render } from "react-dom";
 
 class ProfilePage extends React.Component {
@@ -58,19 +59,22 @@ class ProfilePage extends React.Component {
     }
     return (
       <div>
-        <Link to="/" onClick={this.handleLogout}>
-          Home
-        </Link>
-        <br />
-        <Link to="/About">About</Link>
-        <br />
-        <Link to="/ContactPage">Contact me</Link>
-        <br />
-        <Link to="/BlogPage">Blog</Link>
-        <h1>Hello everyone! This is my profile page!</h1>
-        <div>Hey everyone, thanks for visiting my profile!</div>
-        <br />
-        {/* <div className="Messages">
+        <div id="menu-links">
+          <Link to="/" onClick={this.handleLogout}>
+            Home
+          </Link>
+
+          <Link to="/About">About</Link>
+
+          <Link to="/ContactPage">Contact</Link>
+
+          <Link to="/BlogPage">Blog</Link>
+        </div>
+        <div className="Menu">
+          <h1>Hello everyone! This is my profile page!</h1>
+          <div>Hey everyone, thanks for visiting my profile!</div>
+
+          {/* <div className="Messages">
           <div className="ListMessage">{display}</div>
           <div className="NewMessage">
             <input
@@ -84,6 +88,7 @@ class ProfilePage extends React.Component {
             </button>
           </div>
         </div> */}
+        </div>
       </div>
     );
   }
