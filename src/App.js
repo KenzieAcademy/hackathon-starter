@@ -6,6 +6,8 @@ import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import RegisterForm from "./components/registerForm/RegisterForm";
 import ProfilePage from "./components/profilePage/ProfilePage";
+import About from "./components/about/About";
+import ContactPage from "./components/contactPage/ContactPage";
 
 class App extends React.Component {
   render() {
@@ -15,6 +17,8 @@ class App extends React.Component {
         <Route exact path="/profile/:username" component={Profile} />
         <Route exact path="/registerForm" component={RegisterForm} />
         <Route exact path="/profilePage" component={ProfilePage} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contactPage" component={ContactPage} />
         <Route exact path="*" component={NotFound} />
       </Switch>
     );

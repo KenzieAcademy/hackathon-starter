@@ -58,6 +58,13 @@ class ProfilePage extends React.Component {
     }
     return (
       <div>
+        <Link to="/" onClick={this.handleLogout}>
+          Home
+        </Link>
+        <br />
+        <Link to="/About">About</Link>
+        <br />
+        <Link to="/ContactPage">Contact me</Link>
         <h1>Hello everyone! This is my profile page!</h1>
         <div>Hey everyone, thanks for visiting my profile!</div>
         <br />
@@ -75,9 +82,6 @@ class ProfilePage extends React.Component {
             </button>
           </div>
         </div> */}
-        <Link to="/" onClick={this.handleLogout}>
-          Back to the main page
-        </Link>
       </div>
     );
   }
