@@ -7,12 +7,12 @@
   border-radius: 1em;
 }
 
-#menu-links {
+#profile-links {
   display: flex;
   padding-left: 1em;
 }
 
-#menu-links a {
+#profile-links a {
   padding-right: 0.5em;
   color: darkblue;
   text-decoration: underline;

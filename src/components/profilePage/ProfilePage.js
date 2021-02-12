@@ -59,7 +59,7 @@ class ProfilePage extends React.Component {
     }
     return (
       <div>
-        <div id="menu-links">
+        <div id="profile-links">
           <Link to="/" onClick={this.handleLogout}>
             Home
           </Link>
