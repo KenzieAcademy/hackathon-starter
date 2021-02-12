@@ -1,5 +1,6 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
+import "./contactPage.css";
 import Messages from "../messages/Messages";
 import { userIsAuthenticated } from "../../redux/HOCs";
 import { Link } from "react-router-dom";
