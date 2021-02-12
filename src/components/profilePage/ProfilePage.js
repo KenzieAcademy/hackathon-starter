@@ -1,18 +1,22 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
+import Messages from "../messages/Messages";
+import { userIsAuthenticated } from "../../redux/HOCs";
+import { Link } from "react-router-dom";
+import { render } from "react-dom";
 
-class Messages extends React.Component {
+class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      firstName: "",
+      lastName: "",
       messages: [],
       message: "",
       count: 0,
       image: "",
     };
   }
-
   componentDidMount() {
     this.fetchMessages();
   }
@@ -52,21 +56,31 @@ class Messages extends React.Component {
         return <li key={value.id}>{value.text}</li>;
       });
     }
-
     return (
-      <div className="Messages">
-        <div className="ListMessage">{display}</div>
-        <div className="NewMessage">
-          <input
-            name="message"
-            onChange={this.handleChange}
-            value={this.state.message}
-          />
-          <button onClick={this.newMessageHandler}> Send Message </button>
+      <div>
+        <h1>Hello everyone! This is my profile page!</h1>
+        <div>Hey everyone, thanks for visiting my profile!</div>
+        <br />
+        <div className="Messages">
+          <div className="ListMessage">{display}</div>
+          <div className="NewMessage">
+            <input
+              name="message"
+              onChange={this.handleChange}
+              value={this.state.message}
+            />
+            <button onClick={this.newMessageHandler}>
+              {" "}
+              Send me a Message!{" "}
+            </button>
+          </div>
         </div>
+        <Link to="/" onClick={this.handleLogout}>
+          Back to the main page
+        </Link>
       </div>
     );
   }
 }
 
-export default withAsyncAction("profile", "all")(Messages);
+export default withAsyncAction("profile", "all")(ProfilePage);

@@ -19,7 +19,7 @@ class Menu extends React.Component {
             <Link to="/" onClick={this.handleLogout}>
               Logout
             </Link>
-            <Link to="/Profile">Profile</Link>
+            <Link to="/profilePage">Profile</Link>
           </div>
         )}
       </div>

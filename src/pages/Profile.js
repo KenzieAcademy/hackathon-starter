@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "../components/menu/Menu";
 import Messages from "../components/messages/Messages";
 import { userIsAuthenticated } from "../redux/HOCs";
+import { Link } from "react-router-dom";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -34,27 +35,8 @@ class Profile extends React.Component {
     return (
       <div className="Profile">
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="firstName">First Name</label>
-            <input
-              type="text"
-              name="firstName"
-              value={this.state.formData.firstName}
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="lastName">First Name</label>
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.formData.firstName}
-              onChange={this.handleChange}
-            />
-          </div>
-          {/* <Menu isAuthenticated={this.props.isAuthenticated} />
-          <Messages username={this.props.match.params.username} /> */}
+          <Menu isAuthenticated={this.props.isAuthenticated} />
+          <Messages username={this.props.match.params.username} />
         </form>
         <div>
           {this.state.formData.firstName}
