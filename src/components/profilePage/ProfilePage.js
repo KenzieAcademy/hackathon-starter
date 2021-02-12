@@ -65,6 +65,8 @@ class ProfilePage extends React.Component {
         <Link to="/About">About</Link>
         <br />
         <Link to="/ContactPage">Contact me</Link>
+        <br />
+        <Link to="/BlogPage">Blog</Link>
         <h1>Hello everyone! This is my profile page!</h1>
         <div>Hey everyone, thanks for visiting my profile!</div>
         <br />

@@ -33,7 +33,7 @@ class ContactPage extends React.Component {
         <h1>Contact Page</h1>
         <p>For business inquiries, contact me at JaneDoe@gmail.com</p>
         <p>Instagram</p>
-        <p>Twitch</p>
+        <p>Tumblr</p>
         <p></p>
         <br />
 
