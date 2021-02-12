@@ -13,6 +13,20 @@ class Messages extends React.Component {
     };
   }
 
+  handleChange = (event) => {
+    let data = { ...this.state };
+
+    data[event.target.name] = event.target.value;
+
+    this.setState(data);
+  };
+
+  sendMessage = (event) => {
+    this.setState({
+      message: "",
+    });
+  };
+
   componentDidMount() {
     this.fetchMessages();
   }
