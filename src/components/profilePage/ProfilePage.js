@@ -61,7 +61,7 @@ class ProfilePage extends React.Component {
         <h1>Hello everyone! This is my profile page!</h1>
         <div>Hey everyone, thanks for visiting my profile!</div>
         <br />
-        <div className="Messages">
+        {/* <div className="Messages">
           <div className="ListMessage">{display}</div>
           <div className="NewMessage">
             <input
@@ -74,7 +74,7 @@ class ProfilePage extends React.Component {
               Send me a Message!{" "}
             </button>
           </div>
-        </div>
+        </div> */}
         <Link to="/" onClick={this.handleLogout}>
           Back to the main page
         </Link>

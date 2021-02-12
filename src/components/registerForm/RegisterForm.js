@@ -66,7 +66,7 @@ class RegisterForm extends React.Component {
           />
         </form>
         <Link to="/" onClick={this.handleLogout}>
-          Logout
+          Register!
         </Link>
       </div>
     );
